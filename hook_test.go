@@ -13,10 +13,10 @@ import (
 func Init() {
 	logrus.SetReportCaller(true) // 日志文件中将记录简单的堆栈（打印日志的地方、函数）
 
-	emailHook := NewMailHook("testapp", emailnotify.WithAccountUserName("hunyxv@gmail"),
+	emailHook := NewMailHook("testapp", emailnotify.WithAccountUserName("hunyxv@gmail.com"),
 		emailnotify.WithAccountPasswd("xxxxxxxxxx"), emailnotify.WithSMTPHost("smtp.gmail.com"),
 		emailnotify.WithSMTPPort(465))
-	emailHook.AddNotifyMem("hunyxv@gmail")
+	emailHook.AddNotifyMem("hunyxv@gmail.com")
 	logrus.AddHook(emailHook)
 }
 
